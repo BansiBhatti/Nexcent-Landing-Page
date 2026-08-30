@@ -1,0 +1,1198 @@
+<html>
+
+<head>
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <style>
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+
+            .Navbar {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 20px;
+                align-items: center;
+                margin-bottom: 10px;
+                position: relative;
+            }
+
+            .right {
+                display: flex;
+                gap: 20px;
+                font-size: 20px;
+                color: #4D4D4D;
+                align-items: center;
+            }
+
+            .menu-toggle {
+                display: none;
+            }
+
+            .menu-icon {
+                display: none;
+                font-size: 25px;
+                cursor: pointer;
+                padding-left: 190px;
+            }
+
+            .left {
+                color: #263238;
+                font-size: 30px;
+                font-weight: bold;
+
+            }
+
+            .reg {
+                background-color: #4Caf4f;
+                padding: 15px 30px 15px 30px;
+                color: white;
+                font-weight: 1px;
+                border-radius: 5px;
+
+            }
+
+            .Navbar .menu {
+                display: flex;
+                justify-content: right;
+                gap: 30px;
+                padding-top: 10px;
+            }
+
+
+            .hero {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10.68px;
+                background-color: #F5F7FA;
+                position: relative;
+                padding-left: 10px;
+            }
+
+            .heading {
+
+                font-size: 50px;
+                font-weight: 700;
+                color: #4D4D4D;
+                line-height: 1.3;
+            }
+
+            .heading span {
+                color: #4acb4f;
+            }
+
+            .subtext {
+                font-size: 18px;
+                color: #717171;
+                margin-top: 10px;
+                margin-bottom: 25px;
+            }
+
+            .hero-img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .hero-btn {
+                background-color: #4acb4f;
+                border: none;
+                padding: 15px 30px;
+                color: white;
+                border-radius: 6px;
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+            .scroll-dots {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+            }
+
+            .dot {
+                height: 10px;
+                width: 10px;
+                background-color: #d7d7d7;
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+            .dot.active {
+                background-color: #4ACB4F;
+            }
+
+            .clients-section {
+                padding-top: 50px;
+                text-align: center;
+            }
+
+            .blog-section label,
+            .title-box label,
+            .community-title label {
+
+                font-size: 30px;
+                color: #4D4D4D;
+                font-weight: 550;
+                justify-content: center;
+
+            }
+
+            .blog-section p,
+            .title-box p,
+            .community-title p {
+
+                font-size: 15px;
+                color: #717171;
+                padding-bottom: 30px;
+            }
+
+            .wid {
+                width: 15%;
+            }
+
+            .logo-row {
+                display: flex;
+                justify-content: space-between;
+                gap: 2px;
+                padding-bottom: 70px;
+                width: 100%;
+            }
+
+            .card {
+                width: 30%;
+            }
+
+            .cards-row {
+                display: flex;
+                justify-content: space-between;
+                gap: 1px;
+                align-items: center;
+            }
+
+            .cards-row label {
+
+                font-size: 30px;
+                color: #4D4D4D;
+                font-weight: 550;
+                margin-top: 200px;
+
+            }
+
+            .cards-row p {
+
+                font-size: 15px;
+                color: #717171;
+                padding-bottom: 30px;
+                font-weight: 400;
+                padding-top: 10px;
+            }
+
+            .card img {
+                padding-bottom: 20px;
+            }
+
+            .pixel {
+                display: flex;
+                justify-content: space-between;
+                gap: 5px;
+                padding-bottom: 60px;
+                padding-top: 10px;
+            }
+
+            .img-left img {
+                display: flex;
+                align-items: center;
+                width: 100%;
+            }
+
+            .text-right label {
+
+                font-size: 40px;
+                color: #4D4D4D;
+                font-weight: 550;
+            }
+
+            .text-right p {
+
+                font-size: 15px;
+                color: #717171;
+                padding-bottom: 30px;
+                font-weight: 400;
+            }
+
+            .stats-section {
+                background: #F5F7FA;
+                padding: 50px 0;
+                margin-bottom: 50px;
+            }
+
+            .stats-container {
+                max-width: 1100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+
+            }
+
+            .left-content label {
+                font-size: 40px;
+                font-weight: 600;
+                color: #4D4D4D;
+
+            }
+
+            .left-content label span {
+                color: #4ACB4F;
+
+            }
+
+            .left-content p {
+                color: #717171;
+                margin-top: 10px;
+
+            }
+
+            .stat-box {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
+            }
+
+            .stat-item label {
+                font-size: 30px;
+                font-weight: 600;
+                color: #4D4D4D;
+
+            }
+
+            .stat-item p {
+                color: #717171;
+                font-size: 14px;
+
+            }
+
+            .stat-item {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .stat-item img {
+                width: 100%;
+                height: 50px;
+            }
+
+            .section {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 50px;
+                gap: 20px;
+            }
+
+            .section .img img {
+                width: 70%;
+            }
+
+
+            .text p {
+
+                font-size: 15px;
+                color: #717171;
+                font-weight: 500;
+                line-height: 22px;
+                max-width: 650px;
+
+            }
+
+            .tim {
+                font-size: 18px;
+                color: #4CAF4F;
+                font-weight: 600;
+            }
+
+            .line {
+                font-size: 14px;
+                color: #89939E;
+            }
+
+            .customer-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 25px;
+                width: 14%;
+            }
+
+            .logo-list {
+                display: flex;
+                align-items: center;
+                gap: 35px;
+            }
+
+            .wid-x {
+                width: 100%;
+            }
+
+            .logo-list img {
+                width: 45px;
+                height: auto;
+            }
+
+            .customers-link {
+                color: #4CAF4F;
+                font-weight: 600;
+                cursor: pointer;
+
+                text-decoration: none;
+            }
+
+
+
+            .blog-section {
+                text-align: center;
+                padding: 40px 120px;
+            }
+
+
+            .blog-section .subtitle {
+                color: #717171;
+                font-size: 18px;
+                max-width: 700px;
+                margin: 0 auto 50px;
+            }
+
+            .blog-container {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+            }
+
+            .blog-card {
+                width: 30%;
+            }
+
+            .blog-card img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            .card-content {
+                background: #fff;
+                padding: 20px;
+                width: 85%;
+                margin: 0 auto;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                position: relative;
+                top: -40px;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card-content label {
+                font-size: 20px;
+                color: #444;
+            }
+
+            .card-content a {
+                margin-top: auto;
+
+                color: #4Caf4f;
+                font-size: 18px;
+                font-weight: 600;
+                text-decoration: none;
+            }
+
+            .customers-link {
+                padding-left: 30px;
+            }
+
+            .cta-section {
+                text-align: center;
+                padding: 100px 20px;
+                background: #f4f7f6;
+            }
+
+            .cta-section h2 {
+
+                font-size: 55px;
+                font-weight: 700;
+                line-height: 1.2;
+                color: #2d3d4f;
+                margin-bottom: 25px;
+            }
+
+            .cta-btn {
+
+                padding: 15px 45px;
+                background: #4Caf4f;
+                color: #FFFFFF;
+                border: none;
+                border-radius: 8px;
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .footer {
+                background: #1d2c33;
+                color: #fff;
+                padding: 60px 180px;
+            }
+
+            .footer-container {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+
+            .logo {
+
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .footer-left img {
+                width: 60px;
+                height: auto;
+                display: inline-block;
+                margin-right: 8px;
+                margin-top: 50px;
+                vertical-align: middle;
+            }
+
+
+            .social-icons i {
+                font-size: 20px;
+                margin-right: 15px;
+                margin-top: 0px;
+            }
+
+            .footer-links {
+                display: flex;
+                gap: 70px;
+            }
+
+            .footer-col h4 {
+
+                margin-bottom: 15px;
+                font-size: 20px;
+            }
+
+            .footer-col a {
+
+                display: block;
+                margin-bottom: 10px;
+                color: #D9DBE1;
+                text-decoration: none;
+            }
+
+            .email-box {
+                display: flex;
+                background: #585f63;
+                padding: 10px;
+                border-radius: 8px;
+                align-items: center;
+            }
+
+            .email-box input {
+                border: none;
+                font-size: 15px;
+                background: transparent;
+                color: #ffffff;
+                width: 180px;
+                outline: none;
+            }
+
+            .email-box button {
+                background: transparent;
+                border: none;
+                color: #D9DBE1;
+                font-size: 20px;
+            }
+
+            .main-division {
+                width: 80%;
+            }
+
+
+            @media screen and (max-width:900px) {
+                .heading {
+
+                    font-size: 35px;
+                    font-weight: 700;
+                    color: #4D4D4D;
+                    text-align: justify;
+                }
+
+                .subtext {
+
+                    font-size: 15px;
+                    text-align: justify;
+                }
+
+                .section {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .stats-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .hero-right img {
+                    width: 90%;
+                }
+
+                .blog-section {
+                    padding: 40px 20px;
+                }
+
+                .blog-container {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 40px;
+                }
+
+                .blog-card {
+                    width: 100%;
+                    max-width: 400px;
+                }
+
+                .card-content {
+                    width: 90%;
+                    height: auto;
+                    top: -30px;
+                }
+
+                .card-content label {
+                    font-size: 18px;
+                    line-height: 1.4;
+                }
+
+                .card-content a {
+                    font-size: 16px;
+                }
+
+                .pixel {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 30px;
+                }
+
+                .img-left img {
+                    width: 80%;
+                    max-width: 320px;
+                }
+
+                .text-right label {
+                    font-size: 28px;
+                    line-height: 1.3;
+                    text-align: justify;
+                }
+
+                .text-right p {
+                    font-size: 14px;
+                    text-align: justify;
+                }
+
+                .text-right button {
+                    padding: 15px 90px 15px 90px;
+                    align-items: center;
+                }
+
+
+                /* Section padding */
+                .logo-row {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 20px;
+                }
+
+                .wid {
+                    width: 10%;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .cards-row {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                .card {
+                    width: 100%;
+                    max-width: 350px;
+                }
+
+                .cta-section h2 {
+
+                    font-size: 25px;
+                    line-height: 1.2;
+
+                }
+
+                .footer {
+                    margin-top: 30px;
+                    padding: 40px 20px;
+                }
+
+                .footer-container {
+                    flex-direction: column;
+                    gap: 40px;
+                }
+
+                .footer-left p {
+                    font-size: 14px;
+
+                }
+
+                .footer-links {
+
+                    font-size: 10px;
+
+                }
+
+                .footer-left img {
+                    margin-top: 0;
+                }
+
+                .email-box {
+                    width: 100%;
+                    max-width: 280px;
+                }
+
+                .email-box input {
+                    width: 100%;
+                }
+
+
+                .right {
+                    display: none;
+                }
+
+                .menu-icon {
+                    display: block;
+                    color: #4D4D4D;
+                }
+
+
+                .right a {
+                    padding: 10px 0;
+                    width: 150px;
+                }
+
+                .section .img img {
+                    width: 90%;
+                    max-width: 500px;
+                    align-items: center;
+                    padding-left: 10px;
+                }
+            }
+
+            @media screen and (max-width:1100px) {
+                .hero {
+                    align-items: center;
+                    padding-bottom: 20px;
+                }
+            }
+
+            @media screen and (max-width:400px) {
+
+                .hero {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 20px 10px 40px;
+                }
+
+                .heading {
+                    font-size: 28px;
+                    line-height: 1.2;
+                    text-align: center;
+                }
+
+                .subtext {
+                    font-size: 14px;
+                    text-align: center;
+                }
+
+                .hero-img {
+                    width: 100%;
+                    max-width: 280px;
+                    height: auto;
+                }
+
+                .hero-btn {
+                    width: 100%;
+                    max-width: 200px;
+                }
+
+                .hero-right {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .scroll-dots {
+                    bottom: 5px;
+                }
+
+                .menu-icon {
+                    padding-left: 100px;
+                }
+
+
+                .left {
+                    font-size: 16px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+
+                .nav-img {
+                    width: 25px;
+                    height: auto;
+                }
+
+                .menu-icon {
+                    padding-left: 0;
+                    font-size: 22px;
+                }
+
+                .reg {
+                    padding: 10px 15px;
+                    font-size: 12px;
+                }
+
+                .logo-row {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 20px;
+                }
+
+                .wid {
+                    width: 70px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .wid img {
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                .stats-section {
+                    padding: 30px 15px;
+                }
+
+                .stats-container {
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 30px;
+                }
+
+                .left-content label {
+                    font-size: 28px;
+                    line-height: 1.3;
+                }
+
+                .left-content p {
+                    font-size: 14px;
+                }
+
+                .stat-box {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                }
+
+                .stat-item {
+                    justify-content: center;
+                    text-align: left;
+                }
+
+                .stat-item img {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .stat-item label {
+                    font-size: 22px;
+                }
+
+                .stat-item p {
+                    font-size: 13px;
+                }
+
+            }
+        </style>
+
+    </head>
+
+
+<body>
+    <div style="display: flex;justify-content: center;">
+        <div class="main-division">
+
+            <!-- Navbar starts here -->
+            <header class="Navbar">
+                <div class="left">
+                    <img src='images/Icon.png' class="nav-img">
+                    <label>Nexcent</label>
+                </div>
+
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+                <label for="menu-toggle" class="menu-icon">
+                    <i class="fa fa-bars"></i>
+                </label>
+
+                <div class="right">
+                    <a href="#">Home</a>
+                    <a href="#">Feature</a>
+                    <a href="#">Community</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Pricing</a>
+                </div>
+                <button class="reg">
+                    Register Now <i class="fa fa-arrow-right"></i>
+                </button>
+
+
+            </header>
+            <!-- Navbar ends here -->
+
+            <!-- Hero starts here -->
+            <div class="hero">
+                <div class="hero-left">
+                    <h1 class="heading">
+                        Lessons and insights<br>
+                        <span>from 8 years</span>
+                    </h1>
+
+                    <p class="subtext">
+                        Where to grow your business as a photographer: site or social media?
+                    </p>
+
+                    <button class="hero-btn">Register</button>
+                </div>
+
+                <div class="hero-right">
+                    <img src="images/hero.png" class="hero-img">
+                </div><br>
+
+                <div class="scroll-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <!-- Hero ends here -->
+
+            <!-- client starts here -->
+            <div class="clients-section">
+
+                <div class="title-box">
+                    <label>Our Clients</label>
+                    <p>We have been working with some Fortune 500+ clients</p>
+
+                    <div class="logo-row">
+                        <div class="wid"><img src="images/Logo1.png"></div>
+                        <div class="wid"><img src="images/Logo2.png"></div>
+                        <div class="wid"><img src="images/logo3.png"></div>
+                        <div class="wid"><img src="images/logo4.png"></div>
+                        <div class="wid"><img src="images/logo5.png"></div>
+                        <div class="wid"><img src="images/logo6.png"></div>
+                        <div class="wid"><img src="images/logo7.png"></div>
+                    </div>
+                </div>
+
+                <div class="community-title">
+                    <label>Manage your entire community<br> in a single system</label>
+                    <p>Who is Nexcent suitable for?</p>
+                </div>
+
+                <div class="cards-row">
+                    <div class="card">
+                        <img src="images/item1.png"><br>
+                        <label>Membership <br> Organisations</label>
+                        <p>Our membership management<br>
+                            software provides full automation of<br>
+                            membership renewals and payments</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="images/item2.png"><br>
+                        <label>National<br>Associations</label>
+                        <p>Our membership management<br>
+                            software provides full automation of<br>
+                            membership renewals and payments</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="images/item3.png"><br>
+                        <label>Clubs And<br>Groups</label>
+                        <p>Our membership management<br>
+                            software provides full automation of<br>
+                            membership renewals and payments</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- client ends here -->
+
+            <!-- pixel starts here -->
+            <div class="pixel">
+                <div class="img-left">
+                    <img src="images/rafiki.png">
+                </div>
+
+                <div class="text-right">
+                    <label>The unseen of spending three<br>years at Pixelgrade</label>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Doloribus alias optio maxime, possimus,<br>nostrum quam molestiae atque est
+                        ratione itaque laborum eius quo aperiam beatae accusantium cum<br> enim,
+                        labore inventore?</p>
+
+                    <button class="hero-btn">Learn More</button>
+                </div>
+            </div>
+            <!-- pixel ends here -->
+
+            <!-- Count starts here -->
+            <section class="stats-section">
+                <div class="stats-container">
+
+                    <div class="left-content">
+                        <label>Helping a local <br>
+                            <span>business reinvent itself</span>
+                        </label>
+                        <p>We reached here with our hard work and dedication</p>
+                    </div>
+
+                    <div class="right-content">
+                        <div class="stat-box">
+
+                            <div class="stat-item">
+                                <img src="images/A1.png">
+                                <div>
+                                    <label>2,245,341</label>
+                                    <p>Members</p>
+                                </div>
+                            </div>
+
+                            <div class="stat-item">
+                                <img src="images/A2.png">
+                                <div>
+                                    <label>46,328</label>
+                                    <p>Clubs</p>
+                                </div>
+                            </div>
+
+                            <div class="stat-item">
+                                <img src="images/A3.png">
+                                <div>
+                                    <label>828,867</label>
+                                    <p>Event Bookings</p>
+                                </div>
+                            </div>
+
+                            <div class="stat-item">
+                                <img src="images/A4.png">
+                                <div>
+                                    <label>1,926,436</label>
+                                    <p>Payments</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- Count ends here -->
+
+            <!-- pixel starts here -->
+            <div class="pixel">
+                <div class="img-left">
+                    <img src="images/Bg.png">
+                </div>
+
+                <div class="text-right">
+                    <label>How to design your site footer like<br>we did</label>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Doloribus alias optio maxime, possimus,<br>nostrum quam molestiae atque est
+                        ratione itaque laborum eius quo aperiam beatae accusantium cum<br> enim,
+                        labore inventore?Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        <br>Neque suscipit debitis ipsam magnam quae culpa magni molestias laborum
+                        <br>temporibus voluptatibus rerum doloribus eaque laboriosam repellendus
+                        reiciendis, consequuntur obcaecati aliquid soluta!
+                    </p>
+
+                    <button class="hero-btn">Learn More</button>
+                </div>
+            </div>
+            <!-- pixel ends here -->
+
+            <!-- Tim starts here -->
+            <div class="section">
+
+                <div class="img">
+                    <img src="images/image 9.png">
+                </div>
+
+                <div class="text">
+
+                    <p>
+                        Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui,
+                        vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero
+                        ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit.
+                        Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus
+                        tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu
+                        turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien,
+                        vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero
+                        condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
+                    </p>
+
+                    <label class="tim">Tim Smith</label><br>
+                    <label class="line">British Dragon Boat Racing Association</label>
+
+                    <!-- LOGO ROW -->
+                    <div class="customer-row">
+
+                        <div class="logo-list">
+                            <div class="wid-x"><img src="images/logo1.png"></div>
+                            <div class="wid-x"><img src="images/logo2.png"></div>
+                            <div class="wid-x"><img src="images/logo3.png"></div>
+                            <div class="wid-x"><img src="images/logo4.png"></div>
+                            <div class="wid-x"><img src="images/logo5.png"></div>
+                            <div class="wid-x"><img src="images/logo6.png"></div>
+                        </div>
+
+                        <a class="customers-link">Meet all customers →</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Tim ends here -->
+
+            <!-- Blog starts here -->
+            <section class="blog-section">
+                <label>Caring is the new marketing</label>
+                <p>
+                    The Nextcent blog is the best place to read about the latest membership insights,<br>
+                    trends and more. See who's joining the community, read about how our community<br>
+                    are increasing their membership income and lot's more.
+                </p>
+
+                <div class="blog-container">
+                    <!-- Card 1 -->
+                    <div class="blog-card">
+                        <img src="images/image 18.png" alt="">
+                        <div class="card-content">
+                            <label>Creating Streamlined Safeguarding Processes with OneRen</label>
+                            <a href="#">Readmore →</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="blog-card">
+                        <img src="images/image 19.png" alt="">
+                        <div class="card-content">
+                            <label>
+                                What are your safeguarding responsibilities
+                                and how can you manage them?
+                            </label>
+                            <a href="#">Readmore →</a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="blog-card">
+                        <img src="images/image 20.png" alt="">
+                        <div class="card-content">
+                            <label>
+                                Revamping the Membership Model with Triathlon Australia
+                            </label>
+                            <a href="#">Readmore →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Blog ends here -->
+
+            <!-- Call to Action Section -->
+            <section class="cta-section">
+                <h2>Pellentesque suscipit <br>fringilla libero eu.</h2>
+                <button class="cta-btn">Get a Demo →</button>
+            </section>
+
+            <!-- Footer Section -->
+            <footer class="footer">
+                <div class="footer-container">
+
+                    <!-- Left Logo + Text -->
+                    <div class="footer-left">
+                        <h2 class="logo"><span class="icon"><img src="images/Icon.png"></span>Nexcent</h2>
+                        <p>Copyright&nbsp;&nbsp;©&nbsp;&nbsp; 2020&nbsp; Landify&nbsp; UI&nbsp; Kit.<br>All rights
+                            reserved</p>
+
+                        <div class="social-icons">
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-dribbble"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <div class="footer-col">
+                            <h4>Company</h4>
+                            <a href="#">About us</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Contact us</a>
+                            <a href="#">Pricing</a>
+                            <a href="#">Testimonials</a>
+                        </div>
+
+                        <div class="footer-col">
+                            <h4>Support</h4>
+                            <a href="#">Help center</a>
+                            <a href="#">Terms of service</a>
+                            <a href="#">Legal</a>
+                            <a href="#">Privacy policy</a>
+                            <a href="#">Status</a>
+                        </div>
+
+                        <div class="footer-col stay">
+                            <h4>Stay up to date</h4>
+                            <div class="email-box">
+                                <input type="email" placeholder="Your email address">
+                                <button>➤</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+</body>
+
+
+</html>
