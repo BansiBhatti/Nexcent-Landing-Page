@@ -1,6 +1,6 @@
 # Nexcent Landing Page
 
-A responsive landing page created as my first HTML/CSS project during my Frontend Developer internship.
+A responsive landing page created as my first HTML/CSS project during my Frontend Developer internship.<br/>
 link https://bansibhatti.github.io/Nexcent-Landing-Page/
 
 ## About the Project
